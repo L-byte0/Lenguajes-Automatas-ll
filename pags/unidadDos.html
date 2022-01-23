@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="stylePags.css">
+  <title>Lenguajes y Automatas 2</title>
+</head>
+
+<body>
+  <!--Barra de navegacion-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:#884EA0;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-robot" style="font-size: 1.5rem;"></i> Lenguajes y
+        autómatas
+        2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--Menu desplegable unidad 1-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 1
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="unidadUno.html#arbol-expresion">1.1 Arboles de expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#acciones">1.2 Acciones semánticas de un analizador
+                  sintáctivo</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#comprobaciones">1.3 Comprobaciones de tipos de
+                  expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#pila">1.4 Pila semántica en un analizador sintáctico</a>
+              </li>
+              <li><a class="dropdown-item" href="unidadUno.html#esquema">1.5 Esquema de traducción</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#generacion">1.6 Generación de la tabla de simbolos y
+                  tabla de
+                  direcciones</a>
+              </li>
+              <li><a class="dropdown-item" href="#manejo-errores">1.7 Manejo de errores semánticos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--Fin de menu desplegable-->
+
+        <!--Menu desplegable unidad 2-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Unidad 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="unidadDos.html#notaciones">2.1 Notaciones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#prefija">2.1.1 Prefija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#infija">2.1.2 Infija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#postfija">2.1.3 Postfija</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#representaciones">2.2 Representaciones de código
+                    intermedio</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#notacion-polaca">2.2.1 Notación polaca</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#codigo-p">2.2.2 Código P</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#triples">2.2.3 Triples</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#cuadruplos">2.2.4 Cuadruplos</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#esquema-generacion">2.3 Esquema de generacióna></li>
+                <li><a class="dropdown-item" href="unidadDos.html#variables-const">2.3.1 Variables y constantes</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#expresiones">2.3.2 Expresiones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-asignacion">2.3.3 Instrucciones de
+                    asignación</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-control">2.3.4 Instrucciones de
+                    control</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#funciones">2.3.5 Funciones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#estructuras">2.1.6 Estructuras</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!--Fin de menu desplegable-->
+
+          <!--Menu desplegable unidad 3-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Unidad 3
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="unidadTres.html#optimizaciones">3.1 Tipos de optimización</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#locales">3.1.1 Locales</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#ciclos">3.1.2 Ciclos</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#globales">3.1.3 Globales</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#mirilla">3.1.4 Mirilla</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#costos">3.2 Costos</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#ejecucion">3.2.1 Costo de ejecución</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#criterios">3.2.2 Criterios para mejorar el
+                      codigo</a>
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#herramientas">3.2.3 Herramientas para el analisis
+                      del
+                      flujo de datos</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Fin de menu desplegable-->
+
+            <!--Menu desplegable unidad 4-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Unidad 4
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="unidad4.html#registros">4.1 Registros</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#ensamblador">4.2 Lenguaje ensamblador</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#maquina">4.3 Lenguaje máquina</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#admin-memoria">4.4 Administración de memoria</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--Fin de menu desplegable-->
+            </div>
+          </div>
+  </nav>
+  <!--Fin de barra de navegacion-->
+
+  <!--Inicia contenido de la pagina-->
+  <div class="container">
+    <!--Tema 2.1-->
+    <h2 style="text-align: center; margin-top: 1rem;">Unidad 2</h2>
+    <div id="notaciones">
+      <h3>2.1 Notaciones</h3>
+      <!--Alerta-->
+      <div class="alert alert-warning" role="alert" style="text-align: justify;"><i
+          class="bi bi-exclamation-triangle"></i>
+        Las notaciones sirven de base para expresar sentencias bien definidas. El uso másextendido de las notaciones
+        sirve para expresar operaciones aritméticas. Lasexpresiones aritméticas se pueden expresar de tres formas
+        distintas: infija, prefija ypostfija. La diversidad de notaciones corresponde en que para algunos casos es
+        mássencillo un tipo de notación.<a href="#LiveAlertBtn" class="alert-link"></a>
+      </div>
+
+      <!--Tema 2.1.1-->
+      <div id="prefija">
+        <h4>2.1.1 Prefija</h4>
+        <div class="row">
+          <div class="col">
+            <p>
+              La notación prefija, también conocida como notación de prefijo o notación prefija, esuna forma de notación
+              para la lógica, la aritmética, y el álgebra. Su característicadistintiva es que coloca los operadores a la
+              izquierda de sus operandos.<br>
+            </p>
+            <p>
+              Si la aridad(es el número deargumentosnecesarios para que dicho operador o función se puedacalcular.) de
+              los operadores es fija, el resultado es una sintaxis que carece deparéntesis u otros signos de agrupación,
+              y todavía puede ser analizada sinambigüedad.
+            </p>
+          </div>
+          <div class="col">
+            <img src="../img/unidadDos/prefija.png" alt="prefija" style="width: 70%;" class="center">
+          </div>
+        </div>
+      </div>
+
+      <!--Tema 2.1.2-->
+      <div id="infija">
+        <br>
+        <h4>2.1.2 Infija</h4>
+        <div class="row">
+          <div class="col">
+            <img src="../img/unidadDos/infija.png" alt="" style="width: 70%;" class="center">
+          </div>
+          <div class="col">
+            <p>
+              La notación de infijo es la notación común de fórmulas aritméticas y lógicas, en la cualse escriben los
+              operadores entre los operandos en que están actuando (ej. 2 + 2) usando un estilo de infijo.
+            </p>
+            <!--Alerta-->
+            <div class="alert alert-primary" role="alert" style="text-align: justify;"><i
+                class="bi bi-exclamation-circle"></i>
+              Las notaciones sirven de base para expresar sentencias bien definidas. El uso más extendido de las
+              notaciones sirve para expresar operaciones aritméticas. Las expresiones aritméticas se pueden expresar de
+              tres formas
+              distintas: infija, prefija y postfija.<a href="#LiveAlertBtn" class="alert-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Tema 2.1.3-->
+      <div id="postfija">
+        <br>
+        <h4>2.1.3 Postfija</h4>
+        <div class="row">
+          <div class="col">
+            <p>
+              La notación postfija pone el operador al final de los dos operandos, por lo que laexpresión queda: ab+5-La
+              notación postfija utiliza una estructura del tipo LIFO (Last First Out) pila, la cual esla más utilizada
+              para la implementación. Llamada también polaca inversa, se usa pararepresentar expresiones sin necesidad
+              de paréntesis. La notación postfija pone el operador al final de los dos operando.
+            </p>
+          </div>
+          <div class="col">
+            <img src="../img/unidadDos/postfija.png" alt="pos" class="center" style="width: 70%;">
+          </div>
+        </div>
+      </div>
+      <center>
+        <div>
+          <br>
+          <h4>Video ilustrativo</h4>
+          <iframe width="830" height="423" src="https://www.youtube.com/embed/p5L1T4EoX4M" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </center>
+    </div>
+    <!--Fin del tema 2.1-->
+
+    <!--Inicio tema 2.2-->
+    <div id="representaciones">
+      <br>
+      <h3>2.2 Representaciones de código intermedio</h3>
+      <!--Alerta-->
+      <div class="alert alert-primary" role="alert">
+        <ul>
+          <li>
+            Existen maneras formales para representar código intermedio.
+          </li>
+          <li>
+            Estas notaciones simplifican la traducción de nuestro código fuente a nuestro código objeto ya que ahorran
+            y acotan símbolos de la tabla de símbolos
+          </li>
+        </ul><a href="#LiveAlertBtn" class="alert-link"></a>
+        <img src="../img/unidadDos/polaca.jpg" alt="" class="center" style="width: 35%;">
+      </div>
+    </div>
+    <!--Tema 2.2.1-->
+    <div id="notacion-polaca">
+      <br>
+      <h4>2.2.1 Notacion polaca</h4>
+      <!--Alerta-->
+      <div class="alert alert-warning" role="alert"><i class="bi bi-exclamation-circle"></i>
+        La notación polaca es la originada por un Autómata con pila, en la que los operadores siempre preceden a los
+        operandos sobre los que actúan, y que tiene la ventaja de no necesitar paréntesis.<br>
+        Se utiliza principalmente para la representación de expresiones aritméticas. Expresión a notación polaca
+        inversa.
+        <a href="#LiveAlertBtn" class="alert-link"></a>
+      </div>
+    </div>
+    <!--Tema 2.2.2-->
+    <div id="codigo-p">
+      <br>
+      <h4>2.2.2 Código P</h4>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>El código P hace referencia a máquinas que utilizan o se auxilian de pilas para generar código objeto.
+            </li>
+            <li>En muchos caso la P se asociado a código portable el cual garantiza que el código compilado en una
+              máquina se pueda ejecutar en otras.</li>
+            <li>Para garantizar la portabilidad del código se necesita que el lenguaje este estandarizado por algún
+              instituto y que dicho código no tenga extensiones particulares.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <img src="../img/unidadDos/pilas.png" alt="pilas" style="width:70%;" class="center">
+        </div>
+      </div>
+      <div class="botones">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop">
+          Ejemplo 1
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Ejemplo 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="../img/unidadDos/ejemplo1.png" alt="">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin preorden boton-->
+
+        <!--Boton postorden-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+          Ejemplo 2
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel2">Ejemplo 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="../img/unidadDos/ejemplo2.png" alt="">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin de boton postorden-->
+      </div>
+
+    </div>
+    <!--Tema 2.2.3-->
+    <div id="triples">
+      <br>
+      <h4>2.2.3 Triplos</h4>
+      <div>
+        <ul>
+          <li>La notación de tres direcciones es una forma abstracta de código intermedio.</li>
+          <li>Esta notación se puede implementar como registros con campos para el operador y operadores.</li>
+          <li>Cuando se utilizan triples se ocupan punteros a la misma estructura de los triples.</li>
+          <li>Se debe tener en cuenta el proceso de asignación, de declaración, expresiones booleanas.</li>
+          <li>Las expresiones lógicas también pueden pasarse a código de tres direcciones, utilizando para ello
+            expresiones en corto circuito.
+          </li>
+        </ul>
+      </div>
+      <!--acordeon de ejemplo triplos-->
+      <p>
+        <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-success"
+          data-bs-target="#collapseWidthExample" data-bs-toggle="collapse" type="button"><i
+            class="bi bi-check-circle"></i>
+          Ejemplo
+        </button>
+      </p>
+
+      <div style="min-height: 10px;">
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+          <div class="card card-body" style="width: 900px;">
+            <img src="../img/unidadDos/ejemploTriplos.png" class="center" alt="" style="width:70%;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--2.2.4 Cuadruplos-->
+    <div id="cuadruplos">
+      <br>
+      <h4>2.2.4 Cuadruplos</h4>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>Es una estructura tipo registro con cuatros campos que se llaman: op, arg1, arg2 y resultado. OP tiene
+              un código intermedio.</li>
+            <li>Se representan X4 valores (Campos)</li>
+            <li>Estructura = record, union, etc.</li>
+            <li>Los operadores unarios como x:=-y no utilizan arg2. Generalmente arg1, arg2 y resultado son valores de
+              tipo puntero y apuntan a una entrada en la tabla de símbolos.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+            Ejemplo
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel3">Ejemplo</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Se tiene la expresion R = 32 * 7 + 34 ^ 18, encontrar su representacion en cuadruplos
+                  </p>
+                  <img src="../img/unidadDos/cuadruplos.png" alt="">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-outline-primary" style="border-color: #884EA0;" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop4">
+            Ejemplo 2
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel4">En amplitud</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Encuentre el cuadruplo para:<br>
+                  </p>
+                  <img src="../img/unidadDos/cuadruplo2.png" alt=""><br>
+                  <p>Respuesta:</p><br>
+                  <img src="../img/unidadDos/respuesta2.png" alt="">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="esquema-generacion">
+      <br>
+      <h3>2.3 Esquema de generación</h3>
+      <!--Alerta-->
+      <div class="alert alert-warning" role="alert">
+        <ul>
+          <li>Los esquemas de generación son las estrategias o acciones que se deberán realizarse y tomarse en cuenta en
+            el momento de generar código intermedio.</li>
+          <li>Los esquemas de generación dependen de cada lenguaje.</li>
+        </ul><a href="#LiveAlertBtn" class="alert-link"></a>
+      </div>
+      <!--2.3.1 variables-->
+      <div id="variables-const">
+        <br>
+        <h4>2.3.1 Variables y constantes</h4>
+        <ul>
+          <li>Una constante es un dato numérico o alfanumérico que no cambia durante la ejecución del programa. Por
+            ejemplo pi=3.1416</li>
+          <li>Una variable es un espacio en la memoria de la computadora que permite almacenar temporalmente un dato
+            durante la ejecución de un proceso, su contenido puede cambiar durante la ejecución del programa. Por
+            ejemplo: area=pi*radio^2</li>
+          Las declaraciones de variables y constantes deben separarse de tal manera que queden las expresiones una por
+          una de manera simple.
+          <li>Por ejemplo int a,b,c; se descompone a int a; int b; intc; respectivamente</li>
+        </ul>
+
+        <!--Carrusel-->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/unidadDos/lenguajes.jpg" class="d-block mx-auto w-50" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/unidadDos/variables.png" class="d-block mx-auto w-50" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--Fin carrusel-->
+      </div>
+
+      <!--2.3.2 Expresiones-->
+      <div id="expresiones">
+        <br>
+        <h4>2.3.2 Expresiones</h4>
+        <div class="row">
+          <div class="col">
+            <ul>
+              <li>Para generar expresiones estas deben representarse de manera más simple y más literal para que su
+                conversión sea más rápida.</li><br>
+              <li>Por ejemplo la traducción de operaciones aritméticas debe especificarse una por una, de tal forma que
+                una expresión sea lo más mínimo posible.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <img src="../img/unidadDos/expresiones.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!--2.3.3 Instrucciones de asignación-->
+      <div id="instrucciones-asignacion">
+        <br>
+        <h4>2.3.3 Instrucciones de asignación</h4>
+        <p>La sintaxis general de la instrucción de asignación es:</p>
+        <ul>
+          <li>nombre_de_la_variable = valor</li>
+        </ul>
+        <p>El valor a la derecha del signo igual puede ser una constante, otra variable o una expresión que combine
+          constantes y variables, pero siempre la variable y su valor deben ser del mismo tipo de dato. Por ejemplo:</p>
+        <ul>
+          <li>edad% = 5</li>
+          <li>area! = 12.3</li>
+          <li>nombre$ = “Pedro”</li>
+        </ul>
+        <!--Carrusel-->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/unidadDos/valor.jpg" class="d-block mx-auto w-50" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/unidadDos/asignacion.png" class="d-block mx-auto w-50" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--Fin carrusel-->
+      </div>
+
+      <!--2.3.4 Instrucciones de control-->
+      <div id="instrucciones-control">
+        <br>
+        <h4>2.3.4 Instrucciones de control</h4>
+        <div class="row">
+          <div class="col" style="text-align: justify;">
+            <ul>
+              <li>En los lenguajes de programación hay estructuras y operadores que permiten controlar el flujo de la
+                ejecución, estos pueden ser ciclos, saltos, condiciones entre otros</li><br>
+              <li>Las instrucciones condicionales nos van a permitir representar éste tipo de comportamiento. Sentencias
+                IF y SWITCH. En otros casos, nos encontraremos con la necesidad de repetir una instrucción o
+                instrucciones un número determinado de veces. En éstos casos utilizaremos instrucciones de control
+                iterativas o repetitivas (ciclos). Sentencias WHILE, DO-WHILE y FOR.</li><br>
+              <li>Las expresiones booleanas se componen de los operadores boleanos (and, or y not) aplicados a los
+                elementos que son variables booleanas o expresiones relacionales.</li><br>
+            </ul>
+          </div>
+          <div class="col">
+            <h6 style="text-align: center;">Video demostrativo de estructuras de control en C++</h6>
+
+            <iframe width="320" height="266" class="center" src="https://www.youtube.com/embed/F49Eng-x5rE"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!--2.3.5 Funciones-->
+      <div id="funciones">
+        <br>
+        <h4>2.3.5 Funciones</h4>
+        <div class="row">
+          <div class="col">
+            <ul style="text-align: justify;">
+              <li>
+                Las funciones pueden reducir a en línea, lo que se hace es expander el código original de la función.
+              </li><br>
+              <li>Las funciones se descomponen simplificando los parámetros de manera individual al igual que el valor
+                de retorno.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <img src="../img/unidadDos/funciones.jpg" class="center" style="width: 80%;" alt="">
+
+          </div>
+        </div>
+      </div>
+      <!--2.1.6 Estructuras-->
+      <div id="estructuras">
+        <br>
+        <h4>2.1.6 Estructuras</h4>
+        <ul style="text-align: justify;">
+          <li>
+            Las estructuras de datos se emplean con el objetivo principal de organizar los datos contenidos dentro de la
+            memoria del ordenador.
+          </li><br>
+          <li>La idea de ver la memoria como un serie de bytes es buena, sin embargo no es suficiente ya que en la misma
+            podemos guardar números, cadenas de caracteres, funciones, objetos, etc. de tal manera que surge la
+            necesidad de establecer los mecanismos adecuados para dar cuenta de la forma, tamaño y objetivo de los datos
+            almacenados.</li><br>
+          <li>La estructura mínima de información manipulable en un sistema de computación es el BIT el cual se agrupa
+            normalmente en bloques de 8 para formar un BYTE. Cabe mencionar que los BITS no son direccionables
+            directamente, sino a través de compuertas AND, OR, NOT, XOR, las cuales en C y C++ se escriben como &, |, ~
+            y ^, conocidos como "Bitwise operators" u "Operadores de manipulación de bits".</li>
+        </ul><br>
+        <img src="../img/unidadDos/estructuras.png" alt="" class="center" style="width: 90%;"><br><br>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

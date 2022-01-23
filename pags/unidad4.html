@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="stylePags.css">
+  <title>Lenguajes y Automatas 2</title>
+</head>
+
+<body>
+  <!--Barra de navegacion-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:#884EA0;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-robot" style="font-size: 1.5rem;"></i> Lenguajes y
+        autómatas
+        2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--Menu desplegable unidad 1-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 1
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="unidadUno.html#arbol-expresion">1.1 Arboles de expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#acciones">1.2 Acciones semánticas de un analizador
+                  sintáctivo</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#comprobaciones">1.3 Comprobaciones de tipos de
+                  expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#pila">1.4 Pila semántica en un analizador sintáctico</a>
+              </li>
+              <li><a class="dropdown-item" href="unidadUno.html#esquema">1.5 Esquema de traducción</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#generacion">1.6 Generación de la tabla de simbolos y
+                  tabla de
+                  direcciones</a>
+              </li>
+              <li><a class="dropdown-item" href="#manejo-errores">1.7 Manejo de errores semánticos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--Fin de menu desplegable-->
+
+        <!--Menu desplegable unidad 2-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Unidad 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="unidadDos.html#notaciones">2.1 Notaciones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#prefija">2.1.1 Prefija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#infija">2.1.2 Infija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#postfija">2.1.3 Postfija</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#representaciones">2.2 Representaciones de código
+                    intermedio</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#notacion-polaca">2.2.1 Notación polaca</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#codigo-p">2.2.2 Código P</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#triples">2.2.3 Triples</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#cuadruplos">2.2.4 Cuadruplos</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#esquema-generacion">2.3 Esquema de generacióna></li>
+                <li><a class="dropdown-item" href="unidadDos.html#variables-const">2.3.1 Variables y constantes</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#expresiones">2.3.2 Expresiones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-asignacion">2.3.3 Instrucciones de
+                    asignación</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-control">2.3.4 Instrucciones de
+                    control</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#funcione">2.3.5 Funciones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#estructuras">2.1.6 Estructuras</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!--Fin de menu desplegable-->
+
+          <!--Menu desplegable unidad 3-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Unidad 3
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="unidadTres.html#optimizaciones">3.1 Tipos de optimización</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#locales">3.1.1 Locales</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#ciclos">3.1.2 Ciclos</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#globales">3.1.3 Globales</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#mirilla">3.1.4 Mirilla</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#costos">3.2 Costos</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#ejecucion">3.2.1 Costo de ejecución</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#criterios">3.2.2 Criterios para mejorar el
+                      codigo</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#herramientas">3.2.3 Herramientas para el analisis
+                      del flujo de datos</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Fin de menu desplegable-->
+
+            <!--Menu desplegable unidad 4-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Unidad 4
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#registros">4.1 Registros</a></li>
+                    <li><a class="dropdown-item" href="#ensamblador">4.2 Lenguaje ensamblador</a></li>
+                    <li><a class="dropdown-item" href="#maquina">4.3 Lenguaje máquina</a></li>
+                    <li><a class="dropdown-item" href="#admin-memoria">4.4 Administración de memoria</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!--Fin de menu desplegable-->
+            </div>
+          </div>
+
+  </nav>
+  <!--Fin de barra de navegacion-->
+
+  <!--Inicia contenido de la pagina-->
+  <div class="container">
+    <h2 style="text-align: center;">Unidad 4</h2>
+    <!--4.1 Registros-->
+    <div id="registros">
+      <h3>4.1 Registros</h3>
+
+      <div class="row">
+        <div class="col">
+          <h4><b>¿Que son?</b></h4>
+          <p>
+            Los registros son la memoria principal de la computadora. Existen diversos registros de propósito general y
+            otros de uso exclusivo. Algunos registros de propósito general son utilizados para cierto tipo de funciones.
+            Existen registros acumuladores, puntero de instrucción, de pila, etc.
+          </p>
+          <div class="botones" style="text-align: left;">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              Registros de datos
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registros de datos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                      <li>AX: Registro acumulador. Es el principal empleado en las operaciones aritméticas.</li>
+                      <li>BX: Registro base. Se usa para indicar un desplazamiento.</li>
+                      <li>CX: Registro contador. Se usa como contador en los bucles.</li>
+                      <li>DX: Registro de datos.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Fin preorden boton-->
+
+            <!--Boton postorden-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop2">
+              Registros de segmentos
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel2">Registros de segmentos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                      <li>CS: Registro de segmento de código. Contiene la dirección de las instrucciones del programa.
+                      </li>
+                      <li>DS: Registro segmento de datos. Contiene la dirección del área de memoria donde se encuentran
+                        los datos del programa.</li>
+                      <li>SS: Registro segmento de pila. Contiene la dirección del segmento de pila. La pila es un
+                        espacio de memoria temporal que se usa para almacenar valores de 16 bits (palabras).</li>
+                      <li>ES: Registro segmento extra. Contiene la dirección del segmento extra. Se trata de un segmento
+                        de datos adicional que se utiliza para superar la limitación de los 64Kb del segmento de datos y
+                        para hacer transferencias de datos entre segmentos.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Fin de boton postorden-->
+
+            <!--boton inorden-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop3">
+              Registros punteros de pila
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel3">Registros punteros de pila</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                      <li>SP: Puntero de la pila. Contiene la dirección relativa al segmento de la pila.</li>
+                      <li>BP: Puntero base. Se utiliza para fijar el puntero de pila y así poder acceder a los elementos
+                        de la pila.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Fin boton inorden-->
+
+            <!--Boton amplitud-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline" style="border-color: #884EA0; margin-top: 2rem;"
+              data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+              Registros índices
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel4">Registros índices:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                      <li>SI: Índice fuente</li>
+                      <li>DI: Índice destino.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img src="../img/unidadCuatro/registros.jpg" style="width: 70%;" class="center" alt="">
+        </div>
+      </div>
+
+    </div>
+    <!--4.2 Lenguaje ensamblador-->
+    <div id="ensamblador">
+      <br>
+      <h3>4.2 Lenguaje ensamblador</h3>
+      <div class="row">
+        <div class="col">
+          <h4>¿Que es?</h4>
+          <p>
+            El lenguaje Assembly (a veces mal llamado "Ensamblador" por su traducción literal al español)
+            es un tipo de lenguaje de bajo nivel utilizado para escribir programas informáticos, y constituye la
+            representación más directa del código máquina específico para cada arquitectura de computadora<br><br>
+            La comunicación en lenguaje de máquina es particular de cada procesador que se usa, y programar en este
+            lenguaje es muy difícil y tedioso, por lo que se empezó a buscar mejores medios de comunicación con ésta.
+            Los lenguajes ensambladores tienen ventajas sobre los lenguajes de máquina.
+          </p>
+          <div class="row">
+            <div class="col">
+              <p>
+                <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-primary"
+                  data-bs-target="#collapseWidthExample" data-bs-toggle="collapse" type="button"><i
+                    class="bi bi-list-check"></i>
+                  Características
+                </button>
+              </p>
+              <div style="min-height: 10px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                  <div class="card card-body" style="width: 500px;">
+                    <p>
+                      El programa lee un archivo escrito en lenguaje ensamblador y sustituye cada uno de los códigos
+                      mnemotécnicos por su equivalente código máquina. Los programas se hacen fácilmente portables de
+                      máquina a máquina y el cálculo de bifurcaciones se hace de manera fácil.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col">
+              <p>
+                <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-success"
+                  data-bs-target="#collapseWidthExample2" data-bs-toggle="collapse" type="button"><i
+                    class="bi bi-check-circle"></i>
+                  Clasificación
+                </button>
+              </p>
+              <div style="min-height: 10px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+                  <div class="card card-body" style="width: 500px;">
+                    <p>
+                    <ul>
+                      <li><b>Ensambladores básicos:</b> Son de muy bajo nivel, y su tarea consiste básicamente, en
+                        ofrecer
+                        nombres simbólicos a las distintas instrucciones, parámetros y cosas tales como los modos de
+                        direccionamiento</li>
+                      <li>
+                        <b>Ensambladores modulares, o macro ensambladores:</b> Descendientes de los ensambladores
+                        básicos,
+                        fueron muy populares en las décadas de los 50 y los 60, fueron antes de la generalización de los
+                        lenguajes de alto nivel. Un macroinstrucción es el equivalente a una función en un lenguaje de
+                        alto nivel.
+                      </li>
+                    </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col">
+              <p>
+                <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-success"
+                  data-bs-target="#collapseWidthExample3" data-bs-toggle="collapse" type="button"><i
+                    class="bi bi-calculator"></i>
+                  Operaciones básicas
+                </button>
+              </p>
+              <div style="min-height: 10px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample3">
+                  <div class="card card-body" style="width: 500px;">
+                    <p>
+                      Las operaciones básicas en un lenguaje ensamblador son la suma la resta la multiplicación y la
+                      división y Necesitara un poco más de información sobre la arquitectura y SO para el cual
+                      programas.<br><br>
+                      Pero la idea básica es:<br><br>
+
+                      --definir que parámetros tendrá la función.<br><br>
+                      --hacer el programa, propiamente dicho, en assembler.<br><br>
+
+                      Siguiendo la convención de pasaje de parámetros, manejará registros y posiciones de memoria,
+                      devolviendo los resultados en donde deba (una posición de memoria, el registro eax, etc.).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col">
+          <img src="../img/unidadCuatro/ensamblador.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!--4.3 Lenguaje máquina-->
+    <div id="maquina">
+      <br><br>
+      <h3>4.3 Lenguaje máquina</h3>
+      <div class="row">
+        <div class="col">
+          <img src="../img/unidadCuatro/maquina.png" alt="">
+          <div class="alert alert-success" role="alert"><i class="bi bi-check2-circle">ventajas</i>
+            <ul>
+              <li>Mayor adaptación al equipo.</li>
+              <li>Máxima velocidad con mínimo uso de memoria.</li>
+            </ul><a href="#LiveAlertBtn" class="alert-link"></a>
+          </div>
+        </div>
+        <div class="col">
+          <p>
+            Se denomina lenguaje máquina a la serie de datos que la parte física de la computadora o hardware, es capaz
+            de interpretar. El lenguaje máquina fue el primero que empleo el hombre para la programación de las primeras
+            computadoras. Una instrucción en lenguaje máquina puede representarse de la siguiente forma:
+            011011001010010011110110. Esta secuencia es fácilmente ejecutada por la computadora, pero es de difícil
+            interpretación, siendo aún más difícil la interpretación de un programa (conjunto de instrucciones) escrito
+            de esta forma.
+          </p>
+          <p>
+          <h5>Características</h5>
+          El lenguaje máquina realiza un conjunto de operaciones predeterminadas llamadas micro operaciones. Las micro
+          operaciones sólo realizan operaciones del tipo aritmética (+,- ,*,/), lógicas (AND, OR, NOT) y de control
+          (secuencial, de control y repetitiva)</p>
+          <!--Alerta-->
+
+
+          <div class="alert alert-danger" role="alert"><i class="bi bi-x-circle">Desventajas</i>
+            <ul>
+              <li>Imposibilidad de escribir código independiente de la máquina.</li>
+              <li>Mayor dificultad en la programación y en la comprensión de los programas.</li>
+              <li>El programador debe conocer más de un centenar de instrucciones.</li>
+              <li>Es necesario conocer en detalle la arquitectura de la máquina.</li>
+            </ul><a href="#LiveAlertBtn" class="alert-link"></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!--4.4 Administración de memoria-->
+    <div id="admin-memoria">
+      <br><br>
+      <h3>4.4 Administración de memoria</h3>
+      <div class="row">
+        <div class="col">
+          <p>La administración de la memoria es un proceso hoy en día muy importante, de tal modo que su mal o buen uso
+            tiene una acción directa sobre el desempeño de memoria. En general un ensamblador tiene un administrador de
+            memoria más limitado que un compilador; en la mayoría de los lenguajes de programación el uso de punteros no
+            estaba vigilado por lo que se tienen muchos problemas con el uso de memoria.
+          </p><br>
+          <p>La memoria principal puede ser considerada como un arreglo lineal de localidades de almacenamiento de un
+            byte
+            de tamaño. Cada localidad de almacenamiento tiene asignada una dirección que la identifica</p>
+
+          <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop20">
+            Compartimiento.
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop20" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel20" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel20">Compartimiento.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Este objetivo parece contradecir al anterior, sin embargo a veces es necesario para los usuarios
+                    poder
+                    compartir y actualizar información (por ejemplo, en una base de datos) y, si se organiza la tarea de
+                    entrada a la misma, se puede evitar el tener varias copias de la rutina.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin preorden boton-->
+
+          <!--Boton postorden-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop21">
+            Reubicación.
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop21" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel21">Reubicación.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    La técnica de multiprogramación requiere que varios programas ocupen la memoria al mismo tiempo. Sin
+                    embargo no se sabe con anticipación donde será cargado cada programa por lo que no es práctico usar
+                    direccionamiento absoluto de memoria.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin de boton postorden-->
+
+          <!--boton inorden-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop22">
+            Organización física.
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop22" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel22">Organización física.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Debido al costo de una memoria principal rápida, éste se usa en conjunto con una memoria secundaria
+                    mucho más lenta (y por consiguiente, barata) a fines de extender su capacidad.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin boton inorden-->
+
+          <!--Boton amplitud-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline" style="border-color: #884EA0;" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop23">
+            Organización lógica.
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop23" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel23">Organización lógica.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Aunque la mayor parte de las memorias son organizadas linealmente con un direccionamiento
+                    secuencial,
+                    esto difícilmente concuerde con el camino seguido por el programa, debido al uso de procedimientos,
+                    funciones, subrutinas, arreglos, etc
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="../img/unidadCuatro/admin.jpg" class="center" style="margin-bottom: 5rem;" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="stylePags.css">
+  <title>Lenguajes y Automatas 2</title>
+</head>
+
+<body>
+  <!--Barra de navegacion-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:#884EA0;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-robot" style="font-size: 1.5rem;"></i> Lenguajes y
+        autómatas
+        2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--Menu desplegable unidad 1-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 1
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="unidadUno.html#arbol-expresion">1.1 Arboles de
+                  expresiones</a>
+              </li>
+              <li><a class="dropdown-item" href="unidadUno.html#acciones">1.2 Acciones semánticas de
+                  un analizador
+                  sintáctico</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#comprobaciones">1.3 Comprobaciones de
+                  tipos de
+                  expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#pila">1.4 Pila semántica en un
+                  analizador
+                  sintáctico</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#esquema">1.5 Esquema de
+                  traducción</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#generacion">1.6 Generación de la
+                  tabla de simbolos
+                  y tabla de direcciones</a>
+              </li>
+              <li><a class="dropdown-item" href="unidadUno.html#manejo-errores">1.7 Manejo de errores
+                  semánticos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--Fin de menu desplegable-->
+
+        <!--Menu desplegable unidad 2-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Unidad 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="unidadDos.html#notaciones">2.1 Notaciones</a>
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#prefija">2.1.1 Prefija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#infija">2.1.2 Infija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#postfija">2.1.3 Postfija</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#representaciones">2.2
+                    Representaciones de código
+                    intermedio</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#notacion-polaca">2.2.1 Notación
+                    polaca</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#codigo-p">2.2.2 Código P</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#triples">2.2.3 Triples</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#cuadruplos">2.2.4 Cuadruplos</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#esquema-generacion">2.3 Esquema
+                    de generación</a>
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#variables-const">2.3.1 Variables
+                    y constantes</a>
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#expresiones">2.3.2
+                    Expresiones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-asignacion">2.3.3
+                    Instrucciones de
+                    asignación</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-control">2.3.4
+                    Instrucciones de
+                    control</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#funciones">2.3.5 Funciones</a>
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#estructuras">2.1.6
+                    Estructuras</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!--Fin de menu desplegable-->
+
+          <!--Menu desplegable unidad 3-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Unidad 3
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="unidadTres.html#optimizaciones">3.1 Tipos de
+                      optimización</a>
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#locales">3.1.1 Locales</a>
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#ciclos">3.1.2 Ciclos</a>
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#globales">3.1.3 Globales</a>
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#mirilla">3.1.4 Mirilla</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="unidadTres.html#costos">3.2 Costos</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#ejecucion">3.2.1 Costo de
+                      ejecución</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#criterios">3.2.2 Criterios
+                      para mejorar el
+                      codigo</a></li>
+                  <li><a class="dropdown-item" href="unidadTres.html#herramientas">3.2.3
+                      Herramientas para el
+                      analisis del flujo de datos</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Fin de menu desplegable-->
+
+            <!--Menu desplegable unidad 4-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Unidad 4
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="unidad4.html#registros">4.1
+                        Registros</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#ensamblador">4.2 Lenguaje
+                        ensamblador</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#maquina">4.3 Lenguaje
+                        máquina</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#admin-memoria">4.4
+                        Administración de
+                        memoria</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!--Fin de menu desplegable-->
+            </div>
+          </div>
+  </nav>
+  <!--Fin de barra de navegacion-->
+  <div class="container">
+    <h2 style="margin-top: 2rem;">¿Que es el machine learning?</h2>
+    <div class="row">
+      <div class="col">
+        <p>
+          El Machine Learning es una disciplina del campo de la Inteligencia Artificial que, a través de algoritmos,
+          dota a
+          los ordenadores de la capacidad de identificar patrones en datos masivos y elaborar predicciones (análisis
+          predictivo). Este aprendizaje permite a los computadores realizar tareas específicas de forma autónoma, es
+          decir,
+          sin necesidad de ser programados.<br><br>
+
+          El término se utilizó por primera vez en 1959. Sin embargo, ha ganado relevancia en los últimos años debido al
+          aumento de la capacidad de computación y al boom de los datos. Las técnicas de aprendizaje automático son, de
+          hecho, una parte fundamental del Big Data.
+        </p>
+
+        <!--Alerta-->
+        <div class="alert alert-primary" role="alert"><i class="bi bi-exclamation-circle"></i><span>Hay difernetes tipos
+            de implementacion que pueden clasificarse en 3 categorias</span>
+          <ul>
+            <li>Aprendizaje supervisado</li>
+            <li>Aprendizaje no supervisado</li>
+            <li>Aprendizaje de refuerzo según la naturaleza de los datos que recibe.</li>
+          </ul><a href="#LiveAlertBtn" class="alert-link"></a>
+        </div>
+      </div>
+      <div class="col">
+        <img src="../img/Resumen/machineL.jpg" style="width: 70%;" class="center" alt="">
+      </div>
+    </div>
+    <h4>Aprendizaje supervisado</h4>
+    <p>En el aprendizaje supervisado, los algoritmos trabajan con datos “etiquetados” (labeled data), intentado
+      encontrar una función que, dadas las variables de entrada (input data), les asigne la etiqueta de salida
+      adecuada.<br><br>
+      El aprendizaje supervisado se suele usar en:
+    </p>
+    <ul>
+      <li>Problemas de clasificación (identificación de dígitos, diagnósticos, o detección de fraude de identidad).</li>
+      <li>Problemas de regresión (predicciones meteorológicas, de expectativa de vida, de crecimiento etc).</li>
+    </ul>
+    <p>Los algoritmos más habituales que aplican para el aprendizaje supervisado son:</p>
+    <ol>
+      <li>Árboles de decisión.</li>
+      <li>Clasificación de Naïve Bayes.</li>
+      <li>Regresión por mínimos cuadrados.</li>
+      <li>Regresión Logística.</li>
+      <li>Support Vector Machines (SVM).</li>
+      <li>Métodos “Ensemble” (Conjuntos de clasificadores).</li>
+    </ol>
+    <img src="../img/Resumen/supervisado.jpg" class="center" style="width:60%" alt="">
+    <br><br>
+    <h4>Aprendizaje no Supervisado</h4>
+    <div class="alert alert-primary" role="alert"><i class="bi bi-exclamation-circle"></i>
+      <p>
+        El aprendizaje no supervisado tiene lugar cuando no se dispone de datos “etiquetados” para el entrenamiento.
+        Sólo conocemos los datos de entrada, pero no existen datos de salida que correspondan a un determinado input.
+      </p><a href="#LiveAlertBtn" class="alert-link"></a>
+    </div>
+
+    <br><br>
+    <h4 style="text-align: center;">Árbol de decisión en Machine Learning </h4>
+    <p>
+      Los algoritmos de aprendizaje basados ​​en árboles se consideran uno de los mejores y más utilizados métodos de
+      aprendizaje supervisado. Los métodos basados ​​en árboles potencian los modelos predictivos con alta precisión,
+      estabilidad y facilidad de interpretación.<br><br>
+
+      A diferencia de los modelos lineales, mapean bastante bien las relaciones no lineales. Son adaptables para
+      resolver cualquier tipo de problema (clasificación o regresión).<br>
+      Métodos como árboles de decisión, bosque aleatorio, aumento de gradiente se utilizan popularmente en todo tipo de
+      problemas de ciencia de datos. Por lo tanto, para cada analista (más reciente también), es importante aprender
+      estos algoritmos y usarlos para modelar.
+    </p>
+    <div class="row">
+      <div class="col">
+        <img src="../img/Resumen/arbol.png" class="center" alt="">
+      </div>
+      <div class="col">
+        <img src="../img/Resumen/arbol2.png" class="center" style="width: 50%;" alt="">
+      </div>
+    </div>
+    <br><br>
+    <h4>Bosque aleatorio</h4>
+    <div class="row">
+      <div class="col">
+        <p>Los Bosques Aleatorios es un algoritmo de Machine Learning flexible y fácil de usar que produce, incluso sin
+          ajuste de parámetros, un gran resultado la mayor parte del tiempo. También es uno de los algoritmos más
+          utilizados, debido a su simplicidad y al hecho de que se puede usar tanto para tareas de clasificación como de
+          regresión.<br><br>
+
+          Los Bosques Aleatorios es un algoritmo de aprendizaje supervisado que, como ya se puede ver en su nombre, crea
+          un bosque y lo hace de alguna manera aleatorio. Para decirlo en palabras simples: el Bosque Aleatorio crea
+          múltiples árboles de decisión y los combina para obtener una predicción más precisa y estable. En general,
+          mientras más árboles en el bosque se vea, más robusto es el bosque.<br><br>
+
+          En este algoritmo se agrega aleatoriedad adicional al modelo, mientras crece los árboles, en lugar de buscar
+          la característica más importante al dividir un nodo, busca la mejor característica entre un subconjunto
+          aleatorio de características. Esto da como resultado una amplia diversidad que generalmente resulta en un
+          mejor modelo.</p>
+      </div>
+      <div class="col">
+        <img src="../img/Resumen/bosque-aleatorio.png" class="center" style="width: 80%;" alt="">
+      </div>
+    </div>
+
+    <h4>Redes neuronales</h4>
+    <p>
+      Básicamente consisten en redes de neuronas simuladas conectadas entre sí. Existen varios tipos en función de su
+      arquitectura y forma de aprendizaje. Una de las más utilizadas es la red basada en varias capas de neuronas de
+      tipo perceptrón, entrenadas mediante la técnica de retropropagación (backpropagation).<br><br>
+    </p>
+    <p>
+      Las redes neuronales permiten extraer información útil y producir inferencias a partir de los datos disponibles
+      gracias a su capacidad de aprendizaje. Sus propiedades como reconocedores de patrones altamente tolerantes a
+      errores permiten combinar las cualidades del razonamiento humano con la lógica precisa y la memoria de los
+      ordenadores, por lo que resultan de gran utilidad en medicina como sistemas de apoyo a las decisiones clínicas.
+    </p>
+    <div class="row">
+      <div class="col">
+        <img src="../img/Resumen/redes1.jpg" alt="">
+      </div>
+      <div class="col">
+        <img src="../img/Resumen/redes2.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

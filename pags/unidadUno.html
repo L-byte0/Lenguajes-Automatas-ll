@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="stylePags.css">
+  <title>Lenguajes y Automatas 2</title>
+</head>
+
+<body>
+  <!--Barra de navegacion-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:#884EA0;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-robot" style="font-size: 1.5rem;"></i> Lenguajes y
+        autómatas
+        2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--Menu desplegable unidad 1-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 1
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#arbol-expresion">1.1 Arboles de expresiones</a></li>
+              <li><a class="dropdown-item" href="#acciones">1.2 Acciones semánticas de un analizador sintáctivo</a></li>
+              <li><a class="dropdown-item" href="#comprobaciones">1.3 Comprobaciones de tipos de expresiones</a></li>
+              <li><a class="dropdown-item" href="#pila">1.4 Pila semántica en un analizador sintáctico</a></li>
+              <li><a class="dropdown-item" href="#esquema">1.5 Esquema de traducción</a></li>
+              <li><a class="dropdown-item" href="#generacion">1.6 Generación de la tabla de simbolos y tabla de
+                  direcciones</a>
+              </li>
+              <li><a class="dropdown-item" href="#manejo-errores">1.7 Manejo de errores semánticos</a></li>
+            </ul>
+          </li>
+        </ul>
+      <!--Fin de menu desplegable-->
+
+      <!--Menu desplegable unidad 2-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 2
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="unidadDos.html#notaciones">2.1 Notaciones</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#prefija">2.1.1 Prefija</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#infija">2.1.2 Infija</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#postfija">2.1.3 Postfija</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="unidadDos.html#representaciones">2.2 Representaciones de código
+                  intermedio</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#notacion-polaca">2.2.1 Notación polaca</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#codigo-p">2.2.2 Código P</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#triples">2.2.3 Triples</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#cuadruplos">2.2.4 Cuadruplos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="unidadDos.html#esquema-generacion">2.3 Esquema de generacióna></li>
+              <li><a class="dropdown-item" href="unidadDos.html#variables-const">2.3.1 Variables y constantes</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#expresiones">2.3.2 Expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#instrucciones-asignacion">2.3.3 Instrucciones de
+                  asignación</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#instrucciones-control">2.3.4 Instrucciones de
+                  control</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#funcione">2.3.5 Funciones</a></li>
+              <li><a class="dropdown-item" href="unidadDos.html#estructuras">2.1.6 Estructuras</a></li>
+            </ul>
+          </li>
+        </ul>
+      <!--Fin de menu desplegable-->
+
+      <!--Menu desplegable unidad 3-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 3
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="unidadTres.html#optimizaciones">3.1 Tipos de optimización</a></li>
+              <li><a class="dropdown-item" href="unidadTres.html#locales">3.1.1 Locales</a></li>
+              <li><a class="dropdown-item" href="unidadTres.html#ciclos">3.1.2 Ciclos</a></li>
+              <li><a class="dropdown-item" href="unidadTres.html#globales">3.1.3 Globales</a></li>
+              <li><a class="dropdown-item" href="unidadTres.html#mirilla">3.1.4 Mirilla</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="unidadTres.html#costos">3.2 Costos</a></li>
+              <li><a class="dropdown-item" href="unidadTres.html#ejecucion">3.2.1 Costo de ejecución</a></li>
+              <li><a class="dropdown-item" href="unidadTres.html#criterios">3.2.2 Criterios para mejorar el codigo</a>
+              </li>
+              <li><a class="dropdown-item" href="unidadTres.html#herramientas">3.2.3 Herramientas para el analisis del
+                  flujo de datos</a></li>
+            </ul>
+          </li>
+        </ul>
+      <!--Fin de menu desplegable-->
+
+      <!--Menu desplegable unidad 4-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 4
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="unidad4.html#registros">4.1 Registros</a></li>
+              <li><a class="dropdown-item" href="unidad4.html#ensamblador">4.2 Lenguaje ensamblador</a></li>
+              <li><a class="dropdown-item" href="unidad4.html#maquina">4.3 Lenguaje máquina</a></li>
+              <li><a class="dropdown-item" href="unidad4.html#admin-memoria">4.4 Administración de memoria</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--Fin de menu desplegable-->
+        </div>
+      </div>
+  </nav>
+  <!--Fin de barra de navegacion-->
+
+  <!--Inicia contenido de la pagina-->
+  <div class="container">
+    <!--Tema 1.1 arboles de expresiones-->
+    <div id="arbol-expresion">
+      <h2 class="titulo" style="text-align: center;"><b>Unidad 1</b></h2>
+      <div class="row" style="margin-top: 2rem;">
+        <div class="col">
+          <h3>1.1 Arboles de expresiones</h3>
+          <p>
+            Árbol de expresiones o árbol semántico. Es una estructura jerárquica en la cual se registran las operaciones
+            que realiza el programa fuente. En cada una de las ramas del el árbol se registra el valor o significado que
+            este debe tener y el análisis se encarga de terminar cuál de los valores registrado en la ramas es
+            aplicable. Los árboles de expresiones representan el código de nivel del lenguaje en forma de datos. Los
+            datos se almacenan en una estructura con forma de árbol. Cada nodo del árbol de expresión representa una
+            expresión.
+          </p>
+        </div>
+        <div class="col">
+          <img src="../img/unidadUno/arboles.png" alt="arboles" class="center" style="width: 70%; height: auto;">
+        </div>
+      </div>
+
+      <!--Botones-->
+      <div class="botones">
+        <!--Preorden boton-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop">
+          Recorrido preorden
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Preorden</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  En este tipo de recorrido se realiza cierta acciónsobre el nodo actual y posteriormente se trata el
+                  hijo
+                  izquierdo y cuando se haya concluido, el hijo derecho
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin preorden boton-->
+
+        <!--Boton postorden-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+          Recorrido postorden
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel2">Postorden</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  En este caso se trata primero el hijo izquierdo, después el derecho y por último el nodo actual.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin de boton postorden-->
+
+        <!--boton inorden-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+          Recorrido inorden
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel3">Inorden</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  En este caso se trata primero el hijo izquierdo, después el derecho y por último el nodo actual.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin boton inorden-->
+
+        <!--Boton amplitud-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline" style="border-color: #884EA0;" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop4">
+          Recorridos en amplitud (o por niveles)
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel4">En amplitud</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  En este caso el recorrido se realiza en orden por los distintos niveles del árbol. Así, se comenzaría
+                  tratando el nivel 1, que sólo contiene el nodo raíz, seguidamente el nivel 2, el 3 y así
+                  sucesivamente.
+                  En los árboles de expresión, la sucesión del preorden de etiquetas nos da lo que se conoce como la
+                  forma
+                  prefijo de una expresión.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin boton amplitud-->
+      </div>
+
+      <!--Carrusel-->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/unidadUno/Pre.jpg" class="d-block mx-auto w-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/unidadUno/Post.jpg" class="d-block mx-auto w-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/unidadUno/Inorden.jpg" class="d-block mx-auto w-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/unidadUno/Niveles.jpg" class="d-block mx-auto" alt="..." style="width: 42%;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Fin carrusel-->
+    </div>
+    <!--Fin del tema 1.1-->
+
+    <!--Inicio tema acciones-->
+    <div id="acciones">
+      <h3>1.2 Acciones semánticas de un analizador sintáctico</h3>
+      <div class="row">
+        <div class="col">
+          <p>
+            Definición de un analizador sintáctico: es la fase del analizador que se encarga de chequear el texto de
+            entrada
+            en base a una gramática dada. Y en caso de que el programa de entrada sea válido, suministra el árbol
+            sintáctico
+            que lo reconoce.
+            En la práctica, el analizador sintáctico también hace:
+          <ul>
+            <li>Acceder a la tabla de símbolo</li>
+            <li>Chequeo de tipos</li>
+            <li>Generar código intermedio.</li>
+            <li>Generar errores cuando se producen.</li>
+          </ul>
+          </p>
+        </div>
+        <div class="col">
+          <img src="../img/unidadUno/Acciones.jpg" alt="acciones" class="d-block mx-auto" style="width:70vh">
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+      <div class="botones">
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+          data-bs-target="#staticBackdro5">
+          Manejo de errores sintácticos
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdro5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel5">Manejo de errores</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  El manejo de errores de sintaxis es el más complicado desde el punto de vista de la creación de
+                  compiladores. Nos interesa que cuando el compilador encuentre un error, se recupere y siga buscando
+                  errores. Por lo tanto el manejador de errores de un analizador sintáctico tiene como objetivos:
+                </p>
+                <ul style="text-align: left;">
+                  <li>Indicar los errores de forma clara y precisa. Aclarar el tipo de error y su localización.</li>
+                  <li>Recuperarse del error, para poder seguir examinando la entrada.</li>
+                  <li>No ralentizar significativamente la compilación</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin preorden boton-->
+
+        <!--Boton postorden-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
+          Tipo de gramática que acepta un analizador sintáctico
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel6">Tipo de gramática</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Nosotros nos centraremos en el análisis sintáctico para lenguajes basados en gramáticas formales, ya
+                  que de otra forma se hace muy difícil la comprensión del compilador, y se pueden corregir, quizás más
+                  fácilmente, errores de muy difícil localización, como es la ambigüedad en el reconocimiento de ciertas
+                  sentencias.
+                  La gramática que acepta el analizador sintáctico es una gramática de contexto libre:
+                </p>
+                <ul style="text-align: left;">
+                  <li>Gramática: G (N, T, P, S)</li>
+                  <li>N = No terminales.</li>
+                  <li>T = Terminales.</li>
+                  <li>P = Reglas de Producción.</li>
+                  <li>S = Axioma Inicial.</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fin tema acciones-->
+
+
+      <div id="comprobaciones">
+        <br>
+        <h3>1.3 Comprobaciones de tipos de expresiones</h3>
+        <p>
+          La labor de comprobación de tipos consiste en conferir a las construcciones sintácticas del lenguaje la
+          semántica de tipificación y en realizar todo tipo de comprobaciones de dicha índole. Por su naturaleza, sin
+          embargo, ésta se encuentra repartida entre la fase de análisis semántico y la generación de código intermedio.
+          En la práctica, el analizador sintáctico también hace:
+        <ul>
+          <li>Acceder a la tabla de símbolos (para hacer parte del trabajo del analizador semántico).</li>
+          <li>Chequeo de tipos (del analizador semántico).</li>
+          <li>Generar código intermedio.</li>
+          <li>Generar errores cuando se producen.</li>
+        </ul>
+        </p>
+        <div class="botones">
+          <!--Botones-->
+          <!--comprobaciones boton-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+            data-bs-target="#staticBackdro7">
+            Comprobaciones estáticas
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdro7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabe7">Comprobaciones estáticas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Las comprobaciones estáticas recogen el compendio de todas aquellas tareas de carácter semántico
+                    que, por su naturaleza, pueden ser realizadas directamente durante la fase de compilación mediante
+                    el uso de los artefactos y mecanismos propios de dicha fase. Este tipo de comprobaciones son
+                    beneficiosas puesto que confieren seguridad a la ejecución del programa.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin preorden boton-->
+
+          <!--Boton postorden-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop8">
+            Comprobaciones dinámicas
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel8">Comprobaciones dinámicas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Las comprobaciones dinámicas son aquellas que no se realizan durante la fase de compilación y se
+                    delegan al momento de la ejecución del programa. Ello requiere generar código ejecutable
+                    específicamente diseñado para realizar tales comprobaciones. Los lenguajes con una carga excesiva de
+                    comprobaciones dinámicas generan programas más largos, lentos e inseguros en ejecución.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin de boton postorden-->
+
+          <!--boton inorden-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop9">
+            Verificación de tipos
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel9">Verificación de tipos</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Comprueba la compatibilidad de tipos de todas las expresiones del código fuente recuperando la
+                    información durante la gestión de declaraciones. Además se asegura de que no existe en el programa
+                    ninguna referencia a ningún símbolo no declarado.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin boton inorden-->
+
+          <!--Boton amplitud-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline" style="border-color: #884EA0;" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop10">
+            Inferencia de tipos
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel10">En amplitud</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    En lenguajes sin tipificación de variables o con sobrecarga se aplican tareas de inferencia de tipos
+                    en el nivel gramatical de las expresiones para resolver el tipo de datos de la expresión resultante
+                    en función del contexto de evaluación.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!--Fin comprobaciones-->
+
+      <!--inicio pila-->
+      <div id="pila">
+        <br>
+        <h3>1.4 Pila semántica en un analizador sintáctico</h3>
+        <br>
+        <div class="row ">
+          <div class="col">
+            <img src="../img/unidadUno/pila.png" class="center" alt="pila" style="width: 40vh;">
+          </div>
+          <div class="col">
+            <p>
+              Pila: colección de datos a los cuales se les puede acceder mediante un extremo, que se conoce generalmente
+              como tope. Las pilas tienen dos operaciones básicas:
+            <ul>
+              <li>Push (para introducir un elemento)</li>
+              <li>Pop (para extraer un elemento)</li>
+            </ul>
+            </p>
+            <p>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                Objetivo teórico
+              </button>
+            </p>
+            <div style="min-height: 120px;">
+              <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                <div class="card card-body" style="width: 1000px;">
+                  Es construir un árbol de análisis sintáctico, este raramente se construye como tal, sino que las
+                  rutinas semánticas integradas van generando el árbol de Sintaxis abstracta. Se especifica mediante una
+                  gramática libre de contexto.
+                  El análisis semántico detecta la validez semántica de las sentencias aceptadas por el analizador
+                  sintáctico. El analizador semántico suele trabajar simultáneamente al analizador sintáctico y en
+                  estrecha cooperación. Se entiende por semántica como el conjunto de reglas que especifican el
+                  significado de cualquier sentencia sintácticamente correcta y escrita en un determinado lenguaje. Las
+                  rutinas semánticas deben realizar la evaluación de los atributos de las gramáticas siguiendo las
+                  reglas semánticas asociadas a cada producción de la gramática.
+                  El análisis sintáctico es la fase en la que se trata de determinar el tipo de los resultados
+                  intermedios, comprobar que los argumentos que tiene un operador pertenecen al conjunto de los
+                  operadores posibles, y si son compatibles entre sí, etc.
+                </div>
+              </div>
+            </div>
+            <!--Acordeon-->
+          </div>
+        </div>
+        <div class="botones" style="margin-top: auto;">
+          <!--Reglas semanticas boton-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop11">
+            Reglas semánticas
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel11">Reglas semánticas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Son el conjunto de normas y especificaciones que definen al lenguaje de programación y están dadas
+                    por la sintaxis del lenguaje, las reglas semánticas asignan un significado lógico a ciertas
+                    expresiones definidas en la sintaxis del lenguaje.<br>
+                    La evaluación de las reglas semánticas define los valores de los atributos en los nodos del árbol de
+                    análisis sintáctico para la cadena de entrada. Una regla semántica también puede tener efectos
+                    colaterales, por ejemplo, imprimir un valor o actualizar una variable global.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin boton-->
+
+          <!--Boton compatibilidad-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop12">
+            Compatibilidad de tipos
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel12">Compatibilidad de tipos</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Durante la fase de análisis semántico, el compilador debe verificar que los tipos y valores
+                    asociados a los objetos de un programa se utilizan de acuerdo con la especificación del lenguaje.
+                    Además debe detectar conversiones implícitas de tipos para efectuarlas o insertar el código
+                    apropiado para efectuarlas así como almacenar información relativa a los tipos de los objetos y
+                    aplicar las reglas de verificación de tipos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin de boton postorden-->
+
+          <!--boton inorden-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop13">
+            Analizadores descendentes
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop31" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel13">Analizadores descendentes</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Parten del axioma inicial de la gramática, se va descendiendo utilizando las derivaciones
+                    izquierdas, hasta llegar a construir la cadena analizada. Se va construyendo el árbol desde sus
+                    nodos terminales. Es decir, se construye desde los símbolos de cadena hasta llegar al axioma de la
+                    gramática.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin boton inorden-->
+
+          <!--Boton amplitud-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-success" style="border-color: #884EA0;" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop14">
+            Bottom up
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop14" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel14">Bottom up</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Es un principio de muchos años del estilo de programación que los elementos funcionales de un
+                    programa no deben ser demasiado grandes. Si un cierto componente de un programa crece más allá de la
+                    etapa donde está fácilmente comprensible, se convierte en una masa de la complejidad que encubre
+                    errores tan fácilmente como una ciudad grande encubre a fugitivos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Boton amplitud-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-primary" style="border-color: #EC09C9;" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop15">
+            Top-down
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop15" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel15">Top-down</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Este método consiste en dividir los problemas en subproblemas más sencillos para conseguir una
+                    solución más rápida. El diseño descendente es un método para resolver el problema que posteriormente
+                    se traducirá a un lenguaje compresible por la computadora.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--fin pila-->
+
+      <!--inicio esquema-->
+      <div id="esquema">
+        <br>
+        <h3>1.5 Esquema de traducción</h3>
+        <p>
+          Un esquema de traducción es una gramática independiente de contexto en la que se asocian atributos con los
+          símbolos gramaticales y se insertan acciones semánticas encerradas entre llaves { } dentro de los lados
+          derechos de las producciones. Los esquemas de traducción pueden tener tantos atributos sintetizados como
+          heredados.<br>
+          Cuando se diseña un esquema de traducción, se deben respetar algunas limitaciones para asegurarse de que el
+          valor de un atributo esté disponible cuando una acción se refiera a él. Estas limitaciones, motivadas por las
+          definiciones con atributos por la izquierda, garantizan que las acciones no hagan referencia a un atributo que
+          aún no haya sido calculado. El ejemplo más sencillo ocurre cuando sólo se necesitan atributos sintetizados, en
+          este caso, se puede construir el esquema de traducción creando una acción que conste de una asignación para
+          cada regla semántica y colocando esta acción al final del lado derecho de la producción asociada.
+        </p>
+        <!--Alerta-->
+        <div class="alert alert-primary" role="alert"><i class="bi bi-exclamation-circle"></i>
+          Se trabaja con esquema de traducción en lugar de hacerlo con definiciones dirigidas por sintaxis, así que se
+          puede ser explícito en cuanto al orden en que tienen que lugar las acciones y las evaluaciones de los
+          atributos.<a href="#LiveAlertBtn" class="alert-link"></a>
+        </div>
+        <div class="botones">
+          <p>
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample">
+              Eliminacion de la recursividad izquierda de un esquema de traducción
+            </button>
+          </p>
+          <div style="min-height: 10px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+              <div class="card card-body" style="width: 1200px; text-align: justify;">
+                Como la mayoría de los operadores aritméticos son asociativos por la izquierda, es natural utilizar
+                gramáticas recursivas por la izquierda para las expresiones. La transformación se aplica a esquemas de
+                traducción con atributos sintetizados.<br>
+                Para el análisis sintáctico descendente, se supone que una acción se ejecuta en el mismo momento en que
+                se expandiría un símbolo en la misma posición.<br>
+                Un atributo heredado de un símbolo debe ser calculado por una acción que aparezca antes que el símbolo,
+                y un atributo sintetizado del no terminal de la izquierda se debe calcular después de que hayan sido
+                calculados todos los atributos de los que depende.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--fin esquema-->
+      <!--inicio generacion-->
+      <div id="generacion">
+        <h3>1.6 Generación de la tabla de simbolos y tabla de direcciones</h3>
+        <div class="row">
+          <div class="col">
+            <p>
+              Las tablas de símbolos (también llamadas tablas de identificadores y tablas de nombres), realizan dos
+              importantes funciones en el proceso de traducción: verificar que la semántica sea correcta y ayudar en la
+              generación apropiada de código. Ambas funciones se realizan insertando o recuperando desde la tabla de
+              símbolos los atributos de las variables usadas en el programa fuente. Estos atributos, tales como: el
+              nombre, tipo, dirección de almacenamiento y dimensión de una variable, usualmente se encuentran
+              explícitamente en las declaraciones o más implícitamente a través del contexto en que aparecen los nombres
+              de variables en el programa.
+            </p>
+          </div>
+          <div class="col">
+            <img src="../img/unidadUno/tablaSimbolos.jpg" alt="tabla" class="center" style="width: 40%;">
+          </div>
+
+        </div>
+
+      </div>
+      <!--Fin generacion-->
+      <!--inicio manejo de errores-->
+      <div id="manejo-errores">
+        <h3>1.7 Manejo de errores semánticos</h3>
+        <div class="row">
+          <div class="col">
+            <img src="../img/unidadUno/errorS.jpeg" alt="error" class="center" style="width: 60%;">
+          </div>
+          <div class="col">
+            <p>
+              A veces unos errores ocultan otros. A veces un error provoca una avalancha de muchos errores que se
+              solucionan con el primero. Es conveniente un buen manejo de errores, y que el compilador detecte todos los
+              errores que tiene el programa y no se pare en el primero que encuentre. Hay, pues, dos criterios a seguir
+              a la hora de manejar errores:
+            <ul>
+              <li>Pararse al detectar el primer error.</li>
+              <li>
+                Detectar todos los errores de una pasada.
+              </li>
+            </ul>
+            </p>
+            El análisis semántico es posterior al sintáctico y mucho más difícil de formalizar que éste. Se trata de
+            determinar el tipo de los resultados intermedios, comprobar que los argumentos que tiene un operador
+            pertenecen al conjunto de los operadores posibles, y si son compatibles entre sí, etc.
+          </div>
+        </div>
+        <br><br>
+      </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="stylePags.css">
+  <title>Lenguajes y Automatas 2</title>
+</head>
+
+<body>
+  <!--Barra de navegacion-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:#884EA0;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-robot" style="font-size: 1.5rem;"></i> Lenguajes y
+        autómatas
+        2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--Menu desplegable unidad 1-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Unidad 1
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="unidadUno.html#arbol-expresion">1.1 Arboles de expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#acciones">1.2 Acciones semánticas de un analizador
+                  sintáctivo</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#comprobaciones">1.3 Comprobaciones de tipos de
+                  expresiones</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#pila">1.4 Pila semántica en un analizador sintáctico</a>
+              </li>
+              <li><a class="dropdown-item" href="unidadUno.html#esquema">1.5 Esquema de traducción</a></li>
+              <li><a class="dropdown-item" href="unidadUno.html#generacion">1.6 Generación de la tabla de simbolos y
+                  tabla de
+                  direcciones</a>
+              </li>
+              <li><a class="dropdown-item" href="#manejo-errores">1.7 Manejo de errores semánticos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--Fin de menu desplegable-->
+
+        <!--Menu desplegable unidad 2-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Unidad 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="unidadDos.html#notaciones">2.1 Notaciones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#prefija">2.1.1 Prefija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#infija">2.1.2 Infija</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#postfija">2.1.3 Postfija</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#representaciones">2.2 Representaciones de código
+                    intermedio</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#notacion-polaca">2.2.1 Notación polaca</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#codigo-p">2.2.2 Código P</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#triples">2.2.3 Triples</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#cuadruplos">2.2.4 Cuadruplos</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="unidadDos.html#esquema-generacion">2.3 Esquema de generacióna></li>
+                <li><a class="dropdown-item" href="unidadDos.html#variables-const">2.3.1 Variables y constantes</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#expresiones">2.3.2 Expresiones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-asignacion">2.3.3 Instrucciones de
+                    asignación</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#instrucciones-control">2.3.4 Instrucciones de
+                    control</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#funcione">2.3.5 Funciones</a></li>
+                <li><a class="dropdown-item" href="unidadDos.html#estructuras">2.1.6 Estructuras</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!--Fin de menu desplegable-->
+
+          <!--Menu desplegable unidad 3-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Unidad 3
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#optimizaciones">3.1 Tipos de optimización</a></li>
+                  <li><a class="dropdown-item" href="#locales">3.1.1 Locales</a></li>
+                  <li><a class="dropdown-item" href="#ciclos">3.1.2 Ciclos</a></li>
+                  <li><a class="dropdown-item" href="#globales">3.1.3 Globales</a></li>
+                  <li><a class="dropdown-item" href="#mirilla">3.1.4 Mirilla</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#costos">3.2 Costos</a></li>
+                  <li><a class="dropdown-item" href="#ejecucion">3.2.1 Costo de ejecución</a></li>
+                  <li><a class="dropdown-item" href="#criterios">3.2.2 Criterios para mejorar el codigo</a></li>
+                  <li><a class="dropdown-item" href="#herramientas">3.2.3 Herramientas para el analisis del flujo de
+                      datos</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Fin de menu desplegable-->
+
+            <!--Menu desplegable unidad 4-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Unidad 4
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="unidad4.html#registros">4.1 Registros</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#ensamblador">4.2 Lenguaje ensamblador</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#maquina">4.3 Lenguaje máquina</a></li>
+                    <li><a class="dropdown-item" href="unidad4.html#admin-memoria">4.4 Administración de memoria</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--Fin de menu desplegable-->
+            </div>
+          </div>
+  </nav>
+  <!--Fin de barra de navegacion-->
+
+  <!--Inicia contenido de la pagina-->
+  <div class="container">
+    <h2 style="text-align: center;">Unidad 3</h2>
+    <div id="optimizaciones">
+      <h3>
+        3.1 Tipos de optimización
+      </h3>
+      <div id="locales">
+        <h4>
+          3.1.1 Locales
+          <i class="bi bi-geo-alt">
+          </i>
+        </h4>
+        <div class="row">
+          <div class="col">
+            <p>
+              La optimización local se realiza sobre módulos del programa. En la mayoría de las ocasiones
+              a través de funciones, métodos, procedimientos, clases, etc.
+              Las optimizaciones locales se realizan sobre el bloque básico
+            </p>
+            <!--Alerta-->
+            <div class="alert alert-primary" role="alert">
+              <i class="bi bi-exclamation-circle">
+              </i>
+              Un bloque básico es un fragmento de código que tiene una única entrada y salida, y cuyas
+              instrucciones se ejecutan secuencialmente.
+              <a class="alert-link" href="#LiveAlertBtn">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <img class="center" src="../img/unidadTres/local.png" style="width: 40%"></img>
+          </div>
+        </div>
+        <div class="botones">
+          <!-- Button trigger modal -->
+          <button class="btn btn-outline-success justify-content-center" data-bs-target="#staticBackdrop"
+            data-bs-toggle="modal" type="button">
+            Ejemplo
+          </button>
+          <!-- Modal -->
+          <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-bs-backdrop="static"
+            data-bs-keyboard="false" id="staticBackdrop" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">
+                    Ejemplo
+                  </h5>
+                  <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="../img/unidadTres/ejemploLocal.png">
+                  </img>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ciclos">
+        <h4>3.1.2 Ciclos<i class="bi bi-arrow-repeat"></i></h4>
+        <div class="row">
+          <div class="col">
+            <img class="center" src="../img/unidadTres/ciclo.gif" style="width: 40%">
+            <br>
+            </img>
+          </div>
+          <div class="col">
+            <p>
+              Los ciclos son una de las partes más esenciales en el rendimiento de un programa dado que
+              realizan acciones repetitivas, y si dichas acciones están mal realizadas, el problema se
+              hace N veces más grandes.
+              <br>
+              <br>
+              La mayoría de las optimizaciones sobre ciclos tratan de encontrar elementos que no deben
+              repetirse en un ciclo.
+              Sea el ejemplo: while(a == b) { int c = a; c = 5; …; }
+            </p>
+          </div>
+        </div>
+        <div class="alert alert-danger" role="alert">
+          <i class="bi bi-exclamation-circle"></i>
+          El problema de la optimización en ciclos y en general radica es que muy difícil saber el uso exacto
+          de algunas instrucciones. Así que no todo código de proceso puede ser optimizado. Otros uso de la
+          optimización pueden ser el mejoramiento de consultas en SQL o en aplicaciones remotas (sockets, E/S,
+          etc.)
+          <a class="alert-link" href="#LiveAlertBtn">
+          </a>
+        </div>
+        <div class="botones">
+          <!-- Button trigger modal -->
+          <button class="btn btn-outline-primary" data-bs-target="#staticBackdrop2" data-bs-toggle="modal"
+            type="button">
+            Reducción de frecuencia
+          </button>
+          <!-- Modal -->
+          <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-bs-backdrop="static"
+            data-bs-keyboard="false" id="staticBackdrop2" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel2">
+                    Reducción
+                  </h5>
+                  <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Detecta las operaciones invariantes de bucle y las calcula una única vez delante
+                    del bucle.
+                  </p>
+                  <img src="../img/unidadTres/ejemploBucle.png">
+                  </img>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin de boton postorden-->
+          <!--boton inorden-->
+          <!-- Button trigger modal -->
+          <button class="btn btn-outline-danger" data-bs-target="#staticBackdrop3" data-bs-toggle="modal" type="button">
+            Reducción de potencia
+          </button>
+          <!-- Modal -->
+          <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-bs-backdrop="static"
+            data-bs-keyboard="false" id="staticBackdrop3" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel3">
+                    Inorden
+                  </h5>
+                  <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Consiste en sustituir productos entre variables inductivas e invariantes de
+                    bucle por sumas.
+                  </p>
+                  <img src="../img/unidadTres/ejemploBucle2.png">
+                  </img>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fin boton inorden-->
+          <!--Boton amplitud-->
+          <!-- Button trigger modal -->
+        </div>
+      </div>
+      <div id="globales">
+        <br>
+        <h4>
+          3.1.3 Globales <i class="bi bi-globe"></i>
+        </h4>
+        <div class="row">
+          <div class="col">
+            <p>
+              La optimización global consiste en encontrar los mejores conjuntos de parámetros que
+              optimizan una función objetivo dada. sólo se pueden dar condiciones de optimalidad global
+              bajo ciertas restricciones (función objetivo convexa y región factible también convexa).
+              Esto hace muy difícil resolver exactamente los problemas de optimización global.
+            </p>
+            <p>
+              <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-primary"
+                data-bs-target="#collapseWidthExample" data-bs-toggle="collapse" type="button">
+                Características
+              </button>
+            </p>
+            <div style="min-height: 10px;">
+              <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                <div class="card card-body" style="width: 1000px;">
+                  <p>
+                  <ul>
+                    <li>
+                      Este tipo de optimización es más lenta, pero mejora el desempeño general de
+                      todo programa.
+                    </li>
+                    <li>
+                      Las optimizaciones globales pueden depender de la arquitectura de la
+                      máquina.
+                    </li>
+                    <li>
+                      En algunos casos es mejor mantener variables globales para agilizar los
+                      procesos (el proceso de declarar variables y eliminarlas toma su tiempo)
+                      pero consume más memoria.
+                    </li>
+                    <li>
+                      Algunas optimizaciones incluyen utilizar como variables registros del CPU,
+                      utilizar instrucción es en ensamblador.
+                    </li>
+                  </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Segundo acordeon de objetivos-->
+            <p>
+              <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-success"
+                data-bs-target="#collapseWidthExample2" data-bs-toggle="collapse" type="button"><i
+                  class="bi bi-check-circle"></i>
+                Objetivos
+              </button>
+            </p>
+            <div style="min-height: 10px;">
+              <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+                <div class="card card-body" style="width: 1000px;">
+                  <p>
+                  <ul>
+                    <li>Obtener código que se ejecuta más eficientemente según los criterios</li>
+                    <li>
+                      En algunos casos es mejor mantener variables globales para agilizar los
+                      procesos (el proceso de declarar variables y eliminarlas toma su tiempo)
+                      pero consume más memoria.
+                    </li>
+                  </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-danger justify-content-center" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop4">
+              Ejemplo
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel4">Ejemplo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Si no se ha definido el orden de evaluación de los operandos la siguiente
+                      optimización es válida.
+                    </p>
+                    <img src="../img/unidadTres/ejemploGlobal.png">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img class="center" src="../img/unidadTres/global.gif" style="width: 70%">
+            </img>
+          </div>
+        </div>
+      </div>
+      <div id="mirilla">
+        <br>
+        <h4>
+          3.1.4 Mirilla <i class="bi bi-plus-circle"></i>
+        </h4>
+        <div class="row">
+          <div class="col">
+            <img src="../img/unidadTres/mirilla.gif" class="center" style="width: 50%">
+          </div>
+          <div class="col">
+            <p>
+              La optimización de mirilla trata de estructurar de manera eficiente el flujo del programa,
+              sobre todo en instrucciones de bifurcación como son las decisiones, ciclos y saltos de
+              rutinas.<br><br>
+
+              La idea es tener los saltos lo más cerca de las llamadas, siendo el salto lo más pequeño
+              posible
+            </p>
+          </div>
+
+        </div>
+        <!--Alerta-->
+        <div class="alert alert-primary" role="alert"><i class="bi bi-exclamation-circle">Ideas básicas</i>
+          <ul>
+            <li>Se recorre el código buscando combinaciones de instrucciones que pueden ser reemplazadas por
+              otras equivalentes más eficientes.
+            </li>
+            <li>Se utiliza una ventana de n instrucciones y un conjunto de patrones de transformación
+              (patrón, secuencias, remplazan).
+            </li>
+            <li>Las nuevas instrucciones son reconsideradas para las futuras optimizaciones.</li>
+          </ul><a href="#LiveAlertBtn" class="alert-link"></a>
+        </div>
+
+      </div>
+    </div>
+    <div id="costos">
+      <h3>
+        3.2 Costos (Memoria, registros, pilas)
+      </h3>
+      <div id="ejecucion">
+        <h4>
+          3.2.1 Costos de ejecución</h4>
+        <br>
+        <!--Alerta-->
+        <div class="alert alert-warning" role="alert"><i class="bi bi-exclamation-circle"></i>
+          Los costos de ejecucion son aquellos que viene implicitos al ejecutar el programa.<br>En algunos programas se
+          tiene un minimo para ejecutar el programa, por lo que el espacio y la velocidad del micropocesador son
+          elementos que se deben oprimizar.<a href="#LiveAlertBtn" class="alert-link"></a>
+          <!--Boton-->
+          <!-- Button trigger modal -->
+          <br>
+          <button type="button" class="btn btn-outline-success justify-content-center" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop10">
+            Ejemplo
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel10" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel10">Ejemplo</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Los dispositivos moviles tiene capacidades mas limitadas que un dispositivo de computo convencional,
+                    razon por la cual el mejor uso de recursos de hardware influye notoriamente en su rendimiento.<br>
+
+                    El hardware que utiliza es inferior a los equipos actuales de computadoras, por lo cual se debe
+                    optimizar lo mas posible las aplicaciones que se desarrollen para este tipo de plataformas.
+                  </p>
+                  <img src="../img/unidadTres/telefono.png" style="width: 50%;" class="center" alt="">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-danger" role="alert"><i class="bi bi-controller"></i>
+          Las aplicaciones multimedia como los videojuegos tienen un costo de ejecución
+          alto por lo cual la optimización de su desempeño es crítico, la gran mayoría de las
+          veces requieren de procesadores rápidos (e.g. tarjetas de video) o de mucha
+          memoria. Otro tipo de aplicaciones que deben optimizarse son las aplicaciones
+          para dispositivos móviles.<a href="#LiveAlertBtn" class="alert-link"></a>
+        </div>
+        <div class="row" style="margin-left: 5rem;">
+          <div class="col">
+            <!--acordeones-->
+            <p>
+              <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-primary"
+                data-bs-target="#collapseWidthExample10" data-bs-toggle="collapse" type="button"><i
+                  class="bi bi-check-circle"></i>
+                Registros
+              </button>
+            </p>
+            <div style="min-height: 10px;">
+              <div class="collapse collapse-horizontal" id="collapseWidthExample10">
+                <div class="card card-body" style="width: 1000px;">
+                  <p>
+                    Los registros del procesador se emplean para controlar instrucciones en ejecucion, manejar
+                    direccionamiento de memoria y proporcionar capacidad aitmetica. Los registros son espacios fisicos
+                    dentro del micropocesador con capacida de 4 bits hasta 64 bits dependiendo del microprocesador que
+                    se
+                    emplee.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!--acordeones-->
+            <p>
+              <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-success"
+                data-bs-target="#collapseWidthExample11" data-bs-toggle="collapse" type="button"><i
+                  class="bi bi-check-circle"></i>
+                La pila
+              </button>
+            </p>
+            <div style="min-height: 10px;">
+              <div class="collapse collapse-horizontal" id="collapseWidthExample11">
+                <div class="card card-body" style="width: 1000px;">
+                  <p>
+                    La asignación de memoria de variables locales se hace de una forma flexible, atendiendo al hecho
+                    de
+                    que
+                    solamente necesitan memoria asignada desde el momento que comienza la ejecución de la función
+                    hasta
+                    el
+                    momento en que ésta finaliza.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+
+            <!--acordeones-->
+            <p>
+              <button aria-controls="collapseWidthExample" aria-expanded="false" class="btn btn-outline-danger"
+                data-bs-target="#collapseWidthExample12" data-bs-toggle="collapse" type="button"><i
+                  class="bi bi-check-circle"></i>
+                Memoria estatica
+              </button>
+            </p>
+            <div style="min-height: 10px;">
+              <div class="collapse collapse-horizontal" id="collapseWidthExample12">
+                <div class="card card-body" style="width: 1000px;">
+                  <p>
+                    La forma más sencilla de almacenar el contenido de una variable en memoria, en tiempo de
+                    ejecución,
+                    es
+                    hacerlo en la memoria estática. Así, el almacenamiento de dichas variables será permanente
+                    (durante
+                    la
+                    ejecución del programa).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="criterios">
+        <h4>
+          3.2.2 Criterios para mejorar el codigo</h4>
+        <div class="alert alert-danger" role="alert"><i class="bi bi-code-slash"></i>
+          La mejor manera de optimizar el código es hacer ver a los programadores que
+          optimicen su código desde el inicio, el problema radica en que el costo podría ser
+          muy grande ya que tendría que codificar más y/o hacer su código más legible. Los
+          criterios de optimización siempre están definidos por el compilador<a href="#LiveAlertBtn"
+            class="alert-link"></a>
+        </div>
+
+
+      </div>
+      <div id="herramientas">
+        <h4>
+          3.2.3 Herramientas para el analisis del flujo de datos</h4>
+        <div class="alert alert-warning" role="alert"><i class="bi bi-exclamation-triangle"></i>
+          La mejor manera de optimizar el código es hacer ver a los programadores que
+          optimicen su código desde el inicio, el problema radica en que el costo podría ser
+          muy grande ya que tendría que codificar más y/o hacer su código más legible. Los
+          criterios de optimización siempre están definidos por el compilador<a href="#LiveAlertBtn"
+            class="alert-link"></a>
+        </div>
+        <img src="../img/unidadTres/depurador.jpeg" style="width: 40%;" class="center" alt="">
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
